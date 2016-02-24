@@ -1,0 +1,63 @@
+#+TITLE: fuselage
+#+SUBTITLE: Simplifying Concourse Resources in Ruby
+#+LATEX: \pagebreak
+
+* Overview
+
+~fuselage~ simplifies development of resources for Concourse by providing
+classes for standard resource steps, interface contracts between Concourse and
+your resource, and clear errors for most failure conditions.
+
+* Implementing a Resource
+
+#+BEGIN_SRC ruby
+  require 'concourse-fuselage'
+#+END_SRC
+
+Inherit from the appropriate class and implement the required methods.
+
+** ~Fuselage::Check~
+
+~Check~ is used to poll for new versions.
+
+*** ~#latest~
+
+Should return a ~Hash~ that describes the latest version. This will be called
+when no prior version has been detected.
+
+*** ~#since(version)~
+
+Will be passed a ~Hash~ in the form ~Out#version~ returns.
+
+Should return an ~Array~ of ~Hashes~, similar to what ~#latest~ would return.
+
+** ~Fuselage::In~
+
+~In~ is called for the ~get~ step of a resource.
+
+*** ~#fetch!~
+
+Fetch ~#version~ place it in ~#workdir~.
+
+Should fail if ~#version~ is unavailable.
+
+** ~Fuselage::Out~
+
+~Out~ is called for the ~put~ step of a resource.
+
+*** ~#update!~
+
+Update the resource. All outputs from prior steps are available in ~#workdir~.
+
+*** ~#version~
+
+Should return a ~Hash~ that describes the resulting version.
+
+* License
+
+Apache 2.0 License, see ~LICENSE.txt~ for details.
+
+* Contributors
+
+- [[https://colstrom.github.io/][Chris Olstrom]] | [[mailto:chris@olstrom.com][e-mail]] | [[https://twitter.com/ChrisOlstrom][Twitter]]
+  
