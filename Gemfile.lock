@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    concourse-fuselage (0.1.0)
+      contracts (~> 0.13, >= 0.13.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    contracts (0.13.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  concourse-fuselage!
+
+BUNDLED WITH
+   1.11.2
