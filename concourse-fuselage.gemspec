@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = 'concourse-fuselage'
-  gem.version       = '0.2.0'
+  gem.version       = '0.3.0'
   gem.authors       = ['Chris Olstrom']
   gem.email         = 'chris@olstrom.com'
   gem.license       = 'MIT'
