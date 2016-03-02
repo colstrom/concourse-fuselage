@@ -7,6 +7,11 @@ module Fuselage
       include ::Contracts::Core
       include ::Contracts::Builtin
       include Source
+
+      Contract None => Maybe[Or[Bool, String]]
+      def debug
+        source['debug']
+      end
     end
   end
 end
