@@ -20,12 +20,12 @@ module Fuselage
 
     Contract None => ArrayOf[HashOf[String, String]]
     def output
-      version.nil? ? [latest] : since(version)
+      JSON.dump version.nil? ? [latest] : since(version)
     end
 
     Contract None => String
     def run
-      p JSON.dump output
+      p output
     end
   end
 end
