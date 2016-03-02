@@ -6,7 +6,7 @@ module Fuselage
       include ::Contracts::Core
       include ::Contracts::Builtin
 
-      Contract None => Maybe[String]
+      Contract None => String
       def build_id
         ENV.fetch 'BUILD_ID'
       rescue KeyError
@@ -14,7 +14,7 @@ module Fuselage
         abort
       end
 
-      Contract None => Maybe[String]
+      Contract None => String
       def build_name
         ENV.fetch 'BUILD_NAME'
       rescue KeyError
@@ -22,7 +22,7 @@ module Fuselage
         abort
       end
 
-      Contract None => Maybe[String]
+      Contract None => String
       def build_job_name
         ENV.fetch 'BUILD_JOB_NAME'
       rescue KeyError
@@ -30,7 +30,7 @@ module Fuselage
         abort
       end
 
-      Contract None => Maybe[String]
+      Contract None => String
       def build_pipeline_name
         ENV.fetch 'BUILD_PIPELINE_NAME'
       rescue KeyError
@@ -38,7 +38,7 @@ module Fuselage
         abort
       end
 
-      Contract None => Maybe[String]
+      Contract None => String
       def atc_external_url
         ENV.fetch 'ATC_EXTERNAL_URL'
       rescue KeyError
