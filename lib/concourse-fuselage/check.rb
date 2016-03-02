@@ -25,7 +25,7 @@ module Fuselage
 
     Contract None => String
     def run
-      p output
+      p output.tap { |string| STDERR.puts string if debugging? }
     end
   end
 end
