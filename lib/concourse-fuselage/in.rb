@@ -15,6 +15,7 @@ module Fuselage
       @version ||= config.fetch 'version'
     rescue KeyError
       STDERR.puts 'Configuration payload is missing version'
+      abort
     end
 
     Contract None => ArrayOf[Maybe[HashOf[String, String]]]
