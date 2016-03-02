@@ -36,7 +36,7 @@ module Fuselage
     Contract None => String
     def run
       fetch!
-      output
+      p output
     end
   end
 end
