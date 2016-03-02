@@ -25,7 +25,7 @@ module Fuselage
 
     Contract None => String
     def run
-      JSON.dump output
+      p JSON.dump output
     end
   end
 end
