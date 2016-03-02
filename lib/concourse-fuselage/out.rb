@@ -33,7 +33,7 @@ module Fuselage
     Contract None => String
     def run
       update!
-      output
+      p output
     end
   end
 end
