@@ -12,6 +12,11 @@ module Fuselage
       def debug
         source['debug']
       end
+
+      Contract None => Bool
+      def debugging?
+        !!debug
+      end
     end
   end
 end
