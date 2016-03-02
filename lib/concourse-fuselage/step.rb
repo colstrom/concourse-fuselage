@@ -6,5 +6,6 @@ module Fuselage
     include ::Contracts::Core
     include ::Contracts::Builtin
     include Support::Source
+    include Support::Debugging
   end
 end
