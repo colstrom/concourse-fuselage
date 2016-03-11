@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = 'concourse-fuselage'
-  gem.version       = '0.5.0'
+  gem.version       = '0.5.1'
   gem.authors       = ['Chris Olstrom']
   gem.license       = 'Apache-2.0'
   gem.summary       = 'Framework for Concourse Resources'
