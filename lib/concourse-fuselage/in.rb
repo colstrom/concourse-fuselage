@@ -36,7 +36,7 @@ module Fuselage
     Contract None => String
     def run
       fetch!
-      p output.tap { |string| STDERR.puts string if debugging? }
+      super
     end
   end
 end
