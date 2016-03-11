@@ -8,7 +8,7 @@ module Fuselage
       include ::Contracts::Core
       include ::Contracts::Builtin
 
-      Contract None => String
+      Contract String => String
       def validated(payload)
         return payload unless malformed? payload
 
@@ -16,7 +16,7 @@ module Fuselage
         abort
       end
 
-      Contract None => Bool
+      Contract String => Bool
       def valid?(payload)
         JSON.parse payload
         true
@@ -24,7 +24,7 @@ module Fuselage
         false
       end
 
-      Contract None => Bool
+      Contract String => Bool
       def malformed?(payload)
         !valid? payload
       end
