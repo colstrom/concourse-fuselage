@@ -2,9 +2,10 @@ Gem::Specification.new do |gem|
   gem.name          = 'concourse-fuselage'
   gem.version       = '0.5.0'
   gem.authors       = ['Chris Olstrom']
-  gem.email         = 'chris@olstrom.com'
   gem.license       = 'Apache-2.0'
   gem.summary       = 'Helpers for Concourse Resources'
+
+  gem.email         = 'chris@olstrom.com'
   gem.description   = 'Helper classes and methods for implementing Concourse Resources'
 
   gem.files         = `git ls-files`.split("\n")
