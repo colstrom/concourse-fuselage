@@ -3,7 +3,7 @@ Gem::Specification.new do |gem|
   gem.version       = '0.3.0'
   gem.authors       = ['Chris Olstrom']
   gem.email         = 'chris@olstrom.com'
-  gem.license       = 'MIT'
+  gem.license       = 'Apache-2.0'
   gem.summary       = 'Helpers for Concourse Resources'
   gem.description   = 'Helper classes and methods for implementing Concourse Resources'
 
