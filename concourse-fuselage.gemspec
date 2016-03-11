@@ -7,7 +7,6 @@ Gem::Specification.new do |gem|
 
   gem.email         = 'chris@olstrom.com'
   gem.homepage      = 'https://github.com/colstrom/concourse-fuselage'
-  gem.description   = 'Helper classes and methods for implementing Concourse Resources'
 
   gem.files         = `git ls-files`.split("\n")
   gem.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
