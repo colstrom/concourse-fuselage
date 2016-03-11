@@ -11,6 +11,10 @@ module Fuselage
     include Support::Debugging
     include Support::Validation
 
+    def output
+      fail NotImplementedError
+    end
+
     def run
       validated(output)
         .tap { |string| STDOUT.puts string }
