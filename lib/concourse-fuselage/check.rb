@@ -18,7 +18,7 @@ module Fuselage
       fail NotImplementedError
     end
 
-    Contract None => ArrayOf[HashOf[String, String]]
+    Contract None => String
     def output
       JSON.dump version.nil? ? [latest] : since(version)
     end
