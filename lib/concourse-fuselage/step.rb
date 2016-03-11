@@ -1,5 +1,6 @@
 require 'contracts'
 require_relative 'support/source'
+require_relative 'support/debugging'
 
 module Fuselage
   class Step
