@@ -3,7 +3,7 @@ Gem::Specification.new do |gem|
   gem.version       = '0.5.0'
   gem.authors       = ['Chris Olstrom']
   gem.license       = 'Apache-2.0'
-  gem.summary       = 'Helpers for Concourse Resources'
+  gem.summary       = 'Framework for Concourse Resources'
 
   gem.email         = 'chris@olstrom.com'
   gem.homepage      = 'https://github.com/colstrom/concourse-fuselage'
