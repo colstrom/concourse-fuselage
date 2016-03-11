@@ -10,5 +10,11 @@ module Fuselage
     include Support::Source
     include Support::Debugging
     include Support::Validation
+
+    def run
+      validated(output)
+        .tap { |string| STDOUT.puts string }
+        .tap { |string| STDERR.puts string if debugging? }
+    end
   end
 end
