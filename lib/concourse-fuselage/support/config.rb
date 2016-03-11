@@ -9,9 +9,7 @@ module Fuselage
 
       Contract None => Hash
       def config
-        @config ||= (JSON.load STDIN || {}).tap do |payload|
-          File.write 'config.json', payload if debugging?
-        end
+        @config ||= JSON.load STDIN || {}
       end
     end
   end
