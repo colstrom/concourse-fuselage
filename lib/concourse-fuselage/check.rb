@@ -20,7 +20,7 @@ module Fuselage
 
     Contract None => String
     def output
-      JSON.dump version.nil? ? [latest] : since(version)
+      JSON.dump version.nil? ? Array(latest) : since(version)
     end
   end
 end
