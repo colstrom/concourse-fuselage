@@ -55,7 +55,8 @@ Should return a ~Hash~ that describes the resulting version.
 
 * License
 
-Apache 2.0 License, see ~LICENSE.txt~ for details.
+  ~concourse-fuselage~ is available under the [[https://tldrlegal.com/license/mit-license][MIT License]]. See ~LICENSE.txt~ for
+  the full text.
 
 * Contributors
 
