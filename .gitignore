@@ -1,3 +1,1 @@
-.bundle/**
-auto/**
-vendor/**
+*.gem
