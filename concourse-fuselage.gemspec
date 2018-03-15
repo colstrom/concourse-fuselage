@@ -1,16 +1,19 @@
 Gem::Specification.new do |gem|
+  tag = `git describe --tags --abbrev=0`.chomp
+
   gem.name          = 'concourse-fuselage'
-  gem.version       = '0.5.2'
-  gem.authors       = ['Chris Olstrom']
-  gem.license       = ['MIT']
+  gem.homepage      = 'https://github.com/colstrom/concourse-fuselage'
   gem.summary       = 'Framework for Concourse Resources'
 
+  gem.version       = "#{tag}"
+  gem.license       = ['MIT']
+  gem.authors       = ['Chris Olstrom']
   gem.email         = 'chris@olstrom.com'
-  gem.homepage      = 'https://github.com/colstrom/concourse-fuselage'
 
-  gem.files         = `git ls-files`.split("\n")
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  gem.files         = `git ls-files -z`.split("\x0")
+  gem.executables   = `git ls-files -z -- bin/*`.split("\x0").map { |f| File.basename(f) }
+  gem.test_files    = `git ls-files -z -- {test,spec,features}/*`.split("\x0")
+
   gem.require_paths = ['lib']
 
   gem.add_runtime_dependency 'contracts', '~> 0.13', '>= 0.13.0'
