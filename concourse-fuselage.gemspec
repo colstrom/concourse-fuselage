@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Framework for Concourse Resources'
 
   gem.version       = "#{tag}"
-  gem.license       = ['MIT']
+  gem.licenses      = ['MIT']
   gem.authors       = ['Chris Olstrom']
   gem.email         = 'chris@olstrom.com'
 
